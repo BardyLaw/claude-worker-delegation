@@ -1,0 +1,14 @@
+{
+  "tiers": {
+    "fast":   { "model": "deepseek/deepseek-v4-flash",   "params": { "reasoning": { "enabled": false } }, "use": "summaries, extraction, boilerplate, simple edits" },
+    "code":   { "model": "qwen/qwen3-coder-next",        "use": "writing/refactoring code, tests, diffs" },
+    "reason": { "model": "deepseek/deepseek-v4-pro",     "use": "tricky logic, debugging hypotheses, second-opinion reviews" },
+    "long":   { "model": "google/gemini-3.1-flash-lite", "use": "very large logs/files (1M context)" }
+  },
+  "provider": { "data_collection": "deny", "sort": "price", "allow_fallbacks": true },
+  "default_max_tokens": 4000,
+  "max_file_bytes": 400000,
+  "max_return_chars": 6000,
+  "daily_budget_usd": 3.0,
+  "concurrency": 4
+}
