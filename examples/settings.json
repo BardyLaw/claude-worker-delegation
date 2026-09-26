@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__workers__delegate",
+      "mcp__workers__delegate_batch",
+      "mcp__workers__worker_stats"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Bash|PowerShell",
+        "hooks": [
+          { "type": "command", "command": "node", "args": ["/path/to/claude-worker-delegation/hooks/delegate-large-reads.js"] }
+        ]
+      }
+    ]
+  }
+}
