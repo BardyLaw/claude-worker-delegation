@@ -1,8 +1,3 @@
-function a() {
-  if (x) {
-    return "q";
-  }
-}
 // workers-mcp: lets the Claude "architect" delegate bulk work to cheap OpenRouter models.
 // The architect passes file paths; this server reads them, so big content never enters Claude's context.
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
